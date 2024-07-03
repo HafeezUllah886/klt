@@ -37,8 +37,25 @@
                             <p class="card-text">PKR {{ number_format($product->price) }} 
                             <span class="card-text text-muted"> - <del> {{ number_format($product->discount_price) }}</del></span>
                             </p>
+                           
                         </div>
-                        
+                         
+                    </div>
+                    <div class="d-flex align-items-center mb-4 pt-2">
+                        <div class="input-group quantity mr-3" style="width: 130px;">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-minus btn-sm" type="button">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control form-control-sm bg-white border-0 text-center p-0" value="1" placeholder="Enter quantity" name="quantity">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-plus btn-sm" type="button">
+                                    <small><i class="fa fa-plus"></i></small>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm">Add</button>
                     </div>
                 </div>
             </div>
