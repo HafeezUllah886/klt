@@ -41,6 +41,8 @@
                     </div>
                     
                 </div>
+                <form id="add_to_cart" action="{{ url('add_cart', $product->id) }}" method="POST">
+                    @csrf
                 <div class="d-flex align-items-center mb-4 pt-2">
                     <div class="input-group quantity mr-3" style="width: 130px;">
                         <div class="input-group-btn">
@@ -48,15 +50,16 @@
                                 <i class="fa fa-minus"></i>
                             </button>
                         </div>
-                        <input type="text" class="form-control form-control-sm bg-white border-0 text-center p-0" value="1" placeholder="Enter quantity" name="quantity">
+                        <input type="number" class="form-control form-control-sm bg-white border-0 text-center p-0" value="1" placeholder="Enter quantity" name="quantity">
                         <div class="input-group-btn">
                             <button class="btn btn-primary btn-plus btn-sm" type="button">
                                 <small><i class="fa fa-plus"></i></small>
                             </button>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-sm">Add</button>
+                    <button type="submit" class="btn btn-primary btn-sm" onclick="document.getElementById('add_to_cart').submit(); return false;">Add</button>
                 </div>
+                </form>
             </div>
         </div>
         @endforeach

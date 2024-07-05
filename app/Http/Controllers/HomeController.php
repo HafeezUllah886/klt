@@ -177,20 +177,15 @@ class Homecontroller extends Controller
                 $cart->price = $product->price * $request->quantity ?? 1;
             }
             $firstImage = $product->images->first();
-            $cart->image_path = $firstImage ? $firstImage->image_path : null;
+            $cart->image = $firstImage ? $firstImage->image_path : null;
 
             $cart->company_name = $product->company->company_name;
 
             $cart->product_id = $product->id;
-
-            $cart->color = $request->color;
             // dd($cart);
             $cart->save();
             // Alert::success('Product Added Succesfully', 'We have added product to the Cart!');
             return redirect()->back();
-
-
-
         }
     }
 
