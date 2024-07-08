@@ -62,7 +62,7 @@
                         @foreach($cart as $cartItem)
                             <tr>
                                 <td class="align-middle">
-                                    <img src="{{ asset('storage/' . $cartItem->image_path) }}" alt="{{ $cartItem->product_name }}" style="width: 50px;">
+                                    <img src="{{ asset('storage/' . $cartItem->image) }}" alt="{{ $cartItem->product_name }}" style="width: 50px;">
                                     {{ $cartItem->product_name }}
                                 </td>
                                 <td class="align-middle">{{ $cartItem['company_name'] }}</td>
